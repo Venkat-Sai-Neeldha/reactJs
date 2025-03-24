@@ -1,93 +1,117 @@
-import React, { useState, useEffect } from "react";
-import App from "./App";
-import './two.css'
+import React, { useState, useEffect } from 'react'
+import { useParams, useNavigate, Link } from 'react-router-dom'
+import './App.css'
+import './form.css'
 
-function Form({ editingUser, savedUser }) {
-  console.log("editingUser", editingUser)
-  console.log("savedUser", editingUser)
+function Form() {
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const [formData, setFormData] = useState({
+    category: '',
+    amount: '',
+    date: '',
+    paymentMethod: ''
+  })
 
-  const [formData, setFormData] = useState(
-    editingUser ? editingUser : {
-      id: "",
-      name: "",
-      phone: "",
-      company: { name: "" },
-      address: { city: "" },
+  useEffect(() => {
+    if (id) {
+      const expenses = JSON.parse(localStorage.getItem('expenses')) || []
+      const expense = expenses.find(exp => exp.id === parseInt(id))
+      if (expense) {
+        setFormData(expense)
+      }
     }
-  );
-
-  // Handle form input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "companyName") {
-      setFormData({ ...formData, company: { name: value } });
-    } else if (name === "city") {
-      setFormData({ ...formData, address: { city: value } });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
+  }, [id])
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    savedUser(formData);
-  };
+    e.preventDefault()
+    const expenses = JSON.parse(localStorage.getItem('expenses')) || []
+
+    const expenseData = {
+      ...formData,
+      amount: parseFloat(formData.amount)
+    }
+
+    let updatedExpenses
+    if (id) {
+      updatedExpenses = expenses.map(exp =>
+        exp.id === parseInt(id) ? { ...expenseData, id: parseInt(id) } : exp
+      )
+    } else {
+      const newId = expenses.length > 0 ? Math.max(...expenses.map(exp => exp.id)) + 1 : 1
+      const newExpense = { ...expenseData, id: newId }
+      updatedExpenses = [...expenses, newExpense]
+    }
+
+    localStorage.setItem('expenses', JSON.stringify(updatedExpenses))
+    navigate('/')
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }))
+  }
 
   return (
-    <div >
-      <h1>{editingUser ? "Edit User" : "Add New User"}</h1>
-      <form id="form">
-        <div>
-          <label>Id:</label>
-          <input
-            type="text"
-            name="id"
-            value={formData.id}
-            onChange={handleChange}
-            disabled={!!editingUser}
-          />
-        </div>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Phone:</label>
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Company Name:</label>
-          <input
-            type="text"
-            name="companyName"
-            value={formData.company.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>City:</label>
-          <input
-            type="text"
-            name="city"
-            value={formData.address.city}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit" onClick={handleSubmit} >Save</button>
-      </form>
-    </div>
-  );
-};
+    <div>
+      <nav>
+        <h2><i>Expense Tracker</i></h2>
+        <h4>{id ? 'Edit Expense' : 'Add New Expense'}</h4>
+        <ul>
+          <li><Link to="/">Back to Dashboard</Link></li>
+        </ul>
+      </nav>
 
-export default Form;
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="category">Category:</label>
+            <select
+              id="category" name="category" value={formData.category} onChange={handleChange} required
+            >
+              <option value="">Select Category</option>
+              <option value="Food">Food</option>
+              <option value="Travel">Travel</option>
+              <option value="Bills">Bills</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="amount">Amount (rupees):</label>
+            <input type="number" id="amount" name="amount" value={formData.amount} onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="date">Date:</label>
+            <input  type="date" id="date" name="date" value={formData.date} onChange={handleChange}required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="paymentMethod">Payment Method:</label>
+            <select
+              id="paymentMethod" name="paymentMethod" value={formData.paymentMethod}  onChange={handleChange} required >
+
+              <option value="">Select Payment Method</option>
+              <option value="Cash">Cash</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="UPI">UPI</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <button type="submit">{id ? 'Update Expense' : 'Add Expense'}</button>
+            <button type="button" onClick={() => navigate('/')}>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+export default Form

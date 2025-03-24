@@ -1,43 +1,22 @@
-div{
-  
-  width: 100%;
-
-}
-table{
-  width: 100%;
-}
 nav{
-  background-color: black;
-  color: white;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: 0px;
-}
-#one{
-  height: 50px;
-  background-color: blanchedalmond;
-  font-size: 25px;
-  text-align: center;
-}
-.pqr{
-  display: flex;
-  height: 100%;
-  width: 50%;
-  justify-content: space-between;
-  align-items: center;
-}
-.abc{
-  font-size: 30px;
-
-}
-#search{
   height: 100px;
-  background-color: black;
-  color: aliceblue;
+  color: white;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+ul{
+  list-style: none;
+}
+body{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-color: azure;
+}
+button{
+  border: 1px solid black;
 }
