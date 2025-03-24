@@ -6,12 +6,7 @@ import './form.css'
 function Form() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({
-    category: '',
-    amount: '',
-    date: '',
-    paymentMethod: ''
-  })
+  const [formData, setFormData] = useState({ category: '',  amount: '',  date: '',  paymentMethod: '' })
 
   useEffect(() => {
     if (id) {

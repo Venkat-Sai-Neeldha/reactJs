@@ -29,7 +29,7 @@ function Dashboard() {
     }
 
     const filteredExpenses = expenses.filter((exp) => {
-        // Search only by category
+
         const searchTerm = search.toLowerCase()
         const matchesSearch = !search || exp.category.toLowerCase().includes(searchTerm)
         
