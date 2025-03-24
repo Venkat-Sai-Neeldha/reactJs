@@ -33,7 +33,6 @@ function Dashboard() {
         const searchTerm = search.toLowerCase()
         const matchesSearch = !search || exp.category.toLowerCase().includes(searchTerm)
         
-        // Keep the category filter separate
         const matchesCategory = !categoryFilter || exp.category === categoryFilter
         
         return matchesSearch && matchesCategory
