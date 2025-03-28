@@ -1,0 +1,20 @@
+INSERT INTO ticket_status (id, description) VALUES 
+(1, 'Open'),
+(2, 'In Progress'),
+(3, 'Closed'),
+(4, 'Resolved');
+
+INSERT INTO ticket_priority (id, description) VALUES 
+(1, 'Critical'),
+(2, 'High'),
+(3, 'Medium'),
+(4, 'Low');
+
+select * from ticket_status;
+INSERT INTO user_role (user_id, role) 
+VALUES ((SELECT id FROM t_user WHERE username = 'admin'), 'ADMIN');
+
+
+
+INSERT INTO t_user (username, password, name, email, phone_number, department) 
+VALUES ('admin', 'password', 'Admin User', 'admin123@questk2.com', '1234567890', 'IT');
