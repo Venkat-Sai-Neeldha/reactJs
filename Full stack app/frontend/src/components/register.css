@@ -1,0 +1,12 @@
+button{
+  width: 20%;
+  background-color: #41a844;
+  color: white;
+  border: none;
+  cursor: pointer;
+  }
+  div{
+    margin-bottom: 10px;
+    width: 100%;
+     padding: 8px; 
+  }
