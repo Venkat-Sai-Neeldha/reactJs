@@ -1,0 +1,10 @@
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.images div img{
+    height: 118px;
+    width: 118px;
+    border-radius: 25px;
+}
