@@ -32,10 +32,15 @@ function Nav() {
             </div></div>
 
             <div id='ser'> 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Search</Form.Label>
-        <Form.Control className='searchbar' type="text" placeholder="Sending goodluck plants and more" />
-      </Form.Group></div>
+            <div className="search-container">
+      <div className="search-bar">
+        <i className="fa fa-search"></i> 
+        <input
+          type="text"
+          placeholder="Search gifts"
+        />
+      </div>
+    </div></div>
            
 
     <div className="icons">
@@ -68,19 +73,80 @@ function Nav() {
         
       </Navbar>
       <Container fluid className="category-container bg-light py-3 d-flex justify-content-center" id='nav2'>
-        <span className="category-item mx-3 d-flex align-items-center">Birthday<img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Occasions <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Anniversary <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Cakes <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Flowers <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Personalised <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Plants <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Chocolates <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Combos <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Lifestyle <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">Global <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-        <span className="category-item mx-3 d-flex align-items-center">On Trend <img src="https://www.fnp.com/icons/navigation-chevron.svg" alt="Arrow" className="ms-1" /></span>
-      </Container>
+      <div id='pqr'>
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Birthday</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Occasions</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Anniversary</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Cakes</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Flowers</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Personalised</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Plants</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Chocolates</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Combos</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Lifestyle</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>Global</option>
+    </select>
+  </span>
+
+  <span className="category-item mx-3 d-flex align-items-center">
+    <select>
+      <option>On Trend</option>
+    </select>
+  </span>
+</div>
+   </Container>
  
       
       

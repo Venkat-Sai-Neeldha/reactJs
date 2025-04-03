@@ -69,3 +69,40 @@ span b{
     justify-content:space-evenly;
     align-items: center;
 }
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4; 
+    padding: 8px 12px;
+    border-radius: 15px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    width: 30vw;
+  }
+  
+  .search-bar i {
+    color: #d4d0d0; 
+    margin-right: 10px; 
+  }
+  
+  .search-bar input {
+    border: none; 
+    outline: none; 
+    background-color: transparent; 
+    font-size: 16px;
+    color: #333; 
+    flex: 1; 
+  }
+  
+  .search-bar input::placeholder {
+    color: #5e5c5c;
+  }
+  #pqr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+  }
+  select {
+    border: none;
+    outline: none; 
+  }
