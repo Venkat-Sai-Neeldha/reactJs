@@ -1,0 +1,143 @@
+.imgs{
+    height: 400px;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imgs .pics{
+    height: 15%;
+    width: 90%;
+}
+.imgs .pics img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.photo{
+    height: 100%;
+    width: 40%;
+
+}
+.photo img{
+    height: 100%;
+    width: 100%;
+}
+.contain{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pics img:hover{
+    transform: scale(1.1);
+}
+.details{
+    height: 100%;
+    width: 40%;
+}
+#span{
+    color: green;
+    font-size: 25px;
+}
+.details p{
+    font-size: 25px;
+}
+select{
+    border: 1px solid grey;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-right: 1px solid grey;
+    height: 7vh;
+}
+#inp{
+ 
+    width: 35vw;
+    height: 7vh;
+    border: 1px solid grey;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#date1{
+    border: 1px solid grey;
+    width: 40vw;
+    height: 7vh;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#date1 img{
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+}
+#date1 input{
+    height: 100%;
+    width: 100%;
+   
+}
+.paytm{
+   width: 100%;
+   background-color: rgb(228, 233, 247);
+   height: 10vh;
+   border-radius: 5px;
+   display: flex;
+   justify-content:flex-start;
+   align-items: center;
+}
+.paytm img{
+  height: 50px;
+  width: 50px;
+
+}
+.twobox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.twobox .one{
+    height: 90%;
+    width: 45%;
+    border:3px solid  rgb(54, 133, 44);
+    border-radius: 10px;
+  color: rgb(53, 129, 43);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.twobox .two{
+    height: 90%;
+    width: 45%;
+    background-color:rgb(54, 133, 44) ;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#rating{
+    width:120px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+#abcd{
+    border-right: 1px solid grey;
+}
+.details p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.one img,.two img{
+    height: 20px;
+    width: 20px;
+}

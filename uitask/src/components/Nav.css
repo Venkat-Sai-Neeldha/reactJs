@@ -101,8 +101,12 @@ span b{
     justify-content: space-between;
     align-items: center;
     gap: 35px;
+    background-color: white;
   }
   select {
     border: none;
     outline: none; 
+  }
+  #select{
+    background-color: #f4f4f4;
   }

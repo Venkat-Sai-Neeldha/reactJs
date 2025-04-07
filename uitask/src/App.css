@@ -1,0 +1,11 @@
+#four{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+#sticky{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
