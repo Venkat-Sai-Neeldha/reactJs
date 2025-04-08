@@ -43,7 +43,7 @@
 .details p{
     font-size: 25px;
 }
-select{
+ .mb-3 select{
     border: 1px solid grey;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;

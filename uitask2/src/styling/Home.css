@@ -1,0 +1,22 @@
+.nav{
+    height: 100px;
+    width: 100vw;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    height: 100px;
+    width: 20%;
+    border: 1px solid grey;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+.search1 img{
+    height: 15px;
+    width: 15px;
+}
