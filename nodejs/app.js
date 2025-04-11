@@ -8,7 +8,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var app = express();
-
+// Basic middleware function that logs request details
+const loggerMiddleware = (req, res, next) => {
+  console.log(`${req.method} request made to: ${req.url}`);
+  next(); // Pass control to the next middleware or route handler
+};
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -18,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(loggerMiddleware);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

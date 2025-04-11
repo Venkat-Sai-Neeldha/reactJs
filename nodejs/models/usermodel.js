@@ -1,6 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/supporttickets', {
-    dialect: 'postgres',
+const databaseConfig = require('../config/config');
+
+const sequelize = new Sequelize(databaseConfig.database, databaseConfig.username, databaseConfig.password, {
+    dialect: databaseConfig.dialect,
     logging: false, 
   });
 

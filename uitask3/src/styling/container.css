@@ -1,0 +1,84 @@
+.con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+.con1,.con2{
+    width: 48%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:8px;
+}
+.con2{
+   
+    height: auto;
+}
+.card .imgcon{
+height: 150px;
+width:220px;
+background-color: rgb(240, 238, 238);
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+.imgcon img{
+    height: 90%;
+    width: 80%;
+}
+.footer{
+    height: 20px;
+    width: 100%;
+    background-color: rgb(240, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.name img{
+    height: 100%;
+     width:10%;
+     border-radius: 50%;
+}
+.card{
+    width:220px;
+    
+}
+.footer .name{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.likes{
+    display: flex;
+    justify-content: space-evenly;   
+    align-items: center;   
+}
+.likes img{
+    height: 100%;
+    width:8%;
+}
+.likes p{
+    font-size: 10px;
+}
+.name p{
+    font-size: 10px;
+}
+.name{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.likes{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

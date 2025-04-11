@@ -1,3 +1,4 @@
+var jwt = require('jsonwebtoken');
 const validateLogin = (req, res) => {
     const { name, password } = req.body;
   
@@ -13,7 +14,8 @@ const validateLogin = (req, res) => {
     
     const passwordHasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
     if (!passwordHasSpecialChar) {
-      return res.status(400).json({ error: 'Password must contain at least one special character.' });
+      var Token = jwt.sign({ username: 'venkatsai' }, 'secret');
+      return res.status(400).json({ error: 'Password must contain at least one special character.',Token });
     }
   
     const validUsername = 'VenkatSai';
@@ -51,7 +53,8 @@ const validateLogindb = async (req, res) => {
 
    
     if (password === user.password) {
-      return res.status(200).json({ message: 'Login successful!' });
+      var Token = jwt.sign({ username: 'venkatsai' }, 'secret');
+      return res.status(200).json({ message: 'Login successful!', token: Token });
     } else {
       return res.status(401).json({ error: 'Invalid credentials.' });
     }
@@ -60,8 +63,6 @@ const validateLogindb = async (req, res) => {
     return res.status(500).json({ error: 'Internal server error.' });
   }
 };
-
-  
   module.exports = {
     validateLogin,validateLogindb,
   };
