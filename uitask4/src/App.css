@@ -1,0 +1,66 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: 90vh;
+  border: 2px solid rgb(221, 220, 220) ;
+  border-radius: 10px;
+  background-color: #745BAD;
+  margin-left: 50px;
+}
+.react-datepicker-popper {
+  z-index: 3 !important;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+}
+body{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+background-image: url('https://t3.ftcdn.net/jpg/08/10/89/84/360_F_810898439_M7GxeIoecPFWfUaIekY0Qw3q4Kh2l0yO.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: fixed;
+height: 100vh;
+width: 100vw;
+}
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 20vw !important;}
+  b{
+    color: white;
+  }
+  .form-control:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1) !important;
+  }
+  .form:hover{
+    box-shadow: 0 0 15px rgb(247, 246, 246) !important;
+    
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw !important;
+    height: 100vh   !important;
+    position: relative;
+    
+  }
+  .text{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    top: 70px;
+    right: 30px;
+    
+  }
+ 
