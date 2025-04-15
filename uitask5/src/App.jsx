@@ -51,7 +51,7 @@ const handlesubmit = (e) => {
     alert("Please enter a valid mobile number");
     return;
   }
-  const zipcodeRegex=/^\d{5}$/
+  const zipcodeRegex=/^\d{6}$/
   if(!zipcodeRegex.test(formData.zipccode)){
     alert("Please enter a valid zip code");
     return;
