@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "@sequelize/postgres": "^7.0.0-alpha.46",
@@ -18,5 +19,8 @@
     "pg": "^8.14.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

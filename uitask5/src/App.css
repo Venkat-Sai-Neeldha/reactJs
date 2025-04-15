@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/view-arrangement-with-keyboard-notebooks_23-2148847749.jpg?t=st=1744715295~exp=1744718895~hmac=555823ef39fcc95ed523c13046ae0681d266a88f734e8abdde63ebcd89c8093f&w=1380');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 580px;
+  border: 1px solid rgb(139, 138, 138);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-right: 70px;
+  margin-top: 10px;
+}
+
+fieldset {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+}
+
+
+fieldset  div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 5px;
+  margin: 2px 0;
+  align-items: center;
+}
+
+label {
+  text-align: right;
+  font-size: 18px;
+}
+
+input, select {
+  width: 250px;
+  border: 1px solid rgb(139, 138, 138);
+  border-radius: 5px;
+  height: 25px;
+  margin-top: 2px;
+  color: rgb(44, 44, 44);
+}
+
+select {
+  height: 30px;
+}
+
+img {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  z-index: 2;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  cursor:pointer;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border: 1px solid rgb(139, 138, 138);
+  box-shadow: 0 0 5px rgb(68, 67, 67);
+  
+}
+
+.container:hover {
+  box-shadow: 0 0 15px rgb(253, 253, 253);
+  border: 1px solid rgb(252, 251, 251);
+}
+.heading{
+  position: absolute;
+  top: 375px;
+  left: 145px;
+  font-size: 45px;
+  z-index: 5;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
