@@ -167,7 +167,11 @@ const handlesubmit = (e) => {
       </fieldset>
       <img src="https://static.vecteezy.com/system/resources/previews/026/322/745/non_2x/modern-circle-green-check-mark-vector.jpg" alt="submit" onClick={handlesubmit}/>
     </div>
-    <div className='heading'><i>Registration Form</i></div>
+    <div className='heading'>
+  
+      <i>Registration Form</i>
+
+    </div>
     </div>
     
   )
